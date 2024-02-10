@@ -18,9 +18,9 @@ function App() {
         <div className="flower-grid">
           <Flower imagePath={flower1} />
           <BeeWorker imagePath={bee1} />
-          <Flower imagePath={flower3} />
-          <BeeWorker imagePath={bee2} />
           <Flower imagePath={flower2} />
+          <BeeWorker imagePath={bee2} />
+          <Flower imagePath={flower3} />
           <BeeWorker imagePath={bee3} />
 
           <div className='test'>
