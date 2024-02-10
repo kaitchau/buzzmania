@@ -1,7 +1,5 @@
 
-
-function Flower(props) {
-
+function BeeWorker(props) {
     const handleClick = () => {
         alert("its clicked");
     }
@@ -16,8 +14,6 @@ function Flower(props) {
     );
   }
 
-  const element = <Flower image="../img/flower1.png"/>;
-
-export default Flower;
 
 
+export default BeeWorker;
