@@ -13,20 +13,34 @@ import bee3 from './img/bee3.png';
 function App() {
   return (
     <div className="App">
-      <MainPage></MainPage>
-      <div className="flower-grid">
-        <Flower imagePath={flower1} />
-        <BeeWorker imagePath={bee1} />
-        <Flower imagePath={flower2} />
+      <div className='left'>
+        <MainPage></MainPage>
+        <div className="flower-grid">
+          <Flower imagePath={flower1} />
+          <BeeWorker imagePath={bee1} />
+          <Flower imagePath={flower3} />
+          <BeeWorker imagePath={bee2} />
+          <Flower imagePath={flower2} />
+          <BeeWorker imagePath={bee3} />
 
-        <Flower imagePath={flower3} />
-        <BeeWorker imagePath={bee2} />
-        <Flower imagePath={flower1} />
-  
-        <Flower imagePath={flower2} />
-        <BeeWorker imagePath={bee3} />
-        <Flower imagePath={flower3} />
+          <div className='test'>
+            {/* <button type='submit'>test</button> */}
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-8 px-16 rounded">GAMBLING</button>
+            
+          </div>
+
+
+          {/* <Flower imagePath={flower2} /> */}
+
+          
+          {/* <Flower imagePath={flower1} /> */}
+    
+          
+          {/* <Flower imagePath={flower3} /> */}
+        </div>
       </div>
+      
+
     </div>
   );
 }

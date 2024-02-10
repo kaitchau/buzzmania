@@ -39,12 +39,18 @@ a {
   align-items: center;
 }
 
-.flower {
-  grid-column: span 1;
+/* .flower {
+  grid-column: 1;
 }
 
 .bee {
   grid-column: span 1;
+} */
+
+.test {
+  margin: auto;
+  grid-column: 3;
+  grid-row: 1 / 3;
 }
 
 .flower:nth-child(3),
