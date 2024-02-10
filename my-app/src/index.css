@@ -39,14 +39,7 @@ a {
   align-items: center;
 }
 
-/* .flower {
-  grid-column: 1;
-}
-
-.bee {
-  grid-column: span 1;
-} */
-
+/* ADD-ON FEATURE: GAMBLING */
 .test {
   margin: auto;
   grid-column: 3;
