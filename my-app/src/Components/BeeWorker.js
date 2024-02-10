@@ -1,7 +1,5 @@
 
-
-function Flower(props) {
-
+function BeeWorker(props) {
     const handleClick = () => {
         alert("its clicked");
     }
@@ -9,15 +7,13 @@ function Flower(props) {
     return (
     
     <a className="flower1" onClick={handleClick} style={{border: '2px solid black', display: 'inline-block' }}>
-      <div><img src={props.imagePath} className="w-53" alt="Dynamic Flower" /></div>
+      <div><img src={props.imagePath} className="w-52" alt="Dynamic Flower" /></div>
       <div>{props.points}</div>
       <div>{props.timeout}</div>
      </a>
     );
   }
 
-  const element = <Flower image="../img/flower1.png"/>;
-
-export default Flower;
 
 
+export default BeeWorker;
