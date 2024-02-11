@@ -17,7 +17,7 @@ function MainPage(props) {
 
 
   return (<>
-   <header className="flex items-center justify-between bg-gray-800 px-6 py-4 rounded-lg shadow-lg">
+   <header className="flex items-center justify-between bg-gray-800 px-6 py-4 rounded-lg shadow-lg mt-0 mb-4">
   <h1 className="text-4xl font-bold text-yellow-500 font-serif mt-1">Buzz Mania 🍯</h1>
   <div className="flex items-center">
     <div className="bg-yellow-500 text-gray-900 px-4 py-2 rounded-lg mr-4">
