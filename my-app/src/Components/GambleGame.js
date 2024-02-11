@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import MyContext from "../index.js"
 
 function GambleGame(props) {
   const [guess, setGuess] = useState('');
   const [betAmount, setBetAmount] = useState('');
   const [resultMessage, setResultMessage] = useState('');
-  const [points, setPoints] = useState(100); // Initial points
+  const { score,setScore } = useContext(MyContext);
 
   const handleGuessSubmit = (event) => {
     event.preventDefault();
@@ -15,12 +16,12 @@ function GambleGame(props) {
       if (randomNumber < userGuess) {
         // User wins
         const profit = parseInt(betAmount);
-        setPoints(points + profit);
+        setScore(score + profit);
         setResultMessage(`Congratulations! You won ${profit} points.`);
       } else {
         // User loses
         const loss = parseInt(betAmount);
-        setPoints(points - loss);
+        setScore(score - loss);
         setResultMessage(`Sorry, you lost ${loss} points.`);
       }
     } else {
@@ -31,15 +32,15 @@ function GambleGame(props) {
   };
 
   return (
-    <div>
+    <div className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded" style={{ maxWidth: "213px"}}>
       <h2>Guessing Game</h2>
       <form onSubmit={handleGuessSubmit}>
-        <input type="number" value={guess} onChange={(e) => setGuess(e.target.value)} placeholder="Enter your guess (0-100)" required />
-        <input type="number" value={betAmount} onChange={(e) => setBetAmount(e.target.value)} placeholder="Enter your bet amount" required />
+        <input type="number" style={{ color: "black" }} value={guess} onChange={(e) => setGuess(e.target.value)} placeholder="Enter your guess (0-100)" required />
+        <input type="number" style={{ color: "black" }} value={betAmount} onChange={(e) => setBetAmount(e.target.value)} placeholder="Enter your bet amount" required />
         <button type="submit">Submit Guess</button>
       </form>
       <p>{resultMessage}</p>
-      <p>Points: {points}</p>
+      <p>Score: {score}</p>
     </div>
   );
 }

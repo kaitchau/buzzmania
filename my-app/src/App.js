@@ -3,7 +3,7 @@ import './App.css';
 import MainPage from './Components/MainPage';
 import Flower from './Components/Flower';
 import BeeWorker from './Components/BeeWorker';
-import Points from './Components/Points';
+import GambleGame from './Components/GambleGame';
 import flower1 from './img/flower1.png';
 import flower2 from './img/flower2.png';
 import flower3 from './img/flower3.png';
@@ -32,26 +32,18 @@ function App() {
           <BeeWorker imagePath={bee3} points={300000}/>
 
 
-
-
           <div className='test'>
               {showGuessingGame ? (
-                <h1 />
+                <GambleGame />
               ) : (
                 <button onClick={handleGamblingButtonClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-8 px-16 rounded">GAMBLING</button>
               )}
             </div>
 
 
-
-
-          {/* <Flower imagePath={flower2} /> */}
-          {/* <Flower imagePath={flower1} /> */}
-          {/* <Flower imagePath={flower3} /> */}
         </div>
       </div>
       
-
     </div>
   );
 }

@@ -5,14 +5,14 @@ import MyContext from "../index.js"
 function MainPage(props) {
     const { score,setScore } = useContext(MyContext);
 
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //       // Update the score by incrementing it by 1
-    //       setScore(prevScore => prevScore + Math.floor(Math.random() * 11));
-    //     }, 1000); // Update the score every 1000 milliseconds (1 second)
+    useEffect(() => {
+        const interval = setInterval(() => {
+          // Update the score by incrementing it by 1
+          setScore(prevScore => prevScore + Math.floor(Math.random() * 11));
+        }, 1000); // Update the score every 1000 milliseconds (1 second)
     
-    //     return () => clearInterval(interval); // Cleanup function to clear the interval when the component unmounts
-    //   }, []); // Empty dependency array ensures that this effect runs only once when the component mounts
+        return () => clearInterval(interval); // Cleanup function to clear the interval when the component unmounts
+      }, []); // Empty dependency array ensures that this effect runs only once when the component mounts
     
 
 
