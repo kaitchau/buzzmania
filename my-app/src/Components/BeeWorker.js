@@ -1,23 +1,35 @@
-import { useContext, useState} from "react";
+import React, { useContext, useState, useEffect} from "react";
 import MyContext from "../index.js"
 
 function BeeWorker(props) {
   const { score, setScore } = useContext(MyContext);
   const [purchased, setPurchased] = useState(false);
+  
+  useEffect(() => {
+    let intervalId;
+    if (purchased) {
+      setScore(prevScore => prevScore - props.points);
+      intervalId = setInterval(() => {
+        setScore((prevScore) => prevScore + Math.floor(props.points / 100));
+      }, 1000); // props.timeout is in seconds, convert to milliseconds
+    }
+    return () => clearInterval(intervalId); // Cleanup the interval on component unmount or state change
+  }, [purchased, setScore, props.points]);
 
   const handleClick = () => {
     if (score >= props.points) {
-      setPurchased(true);
+      if (purchased){
+        alert("Already purchased!");
+
+      }
+      else
+      {
+        setPurchased(true);
+      }
     } else {
-      alert("Not enough points to purchase this bee!");
+      alert("Not enough nectar to purchase this bee!");
     }
   };
-
-  if (purchased) {
-    setInterval(() => {
-      setScore((prevScore) => prevScore + Math.floor(props.points/100));
-    }, 1000); // props.timeout is in seconds, convert to milliseconds
-  }
 
   return (
       <a className="bee-worker block border-2 border-black inline-block p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out" onClick={handleClick}>

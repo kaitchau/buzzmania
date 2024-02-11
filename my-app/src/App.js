@@ -1,5 +1,4 @@
-// App.js
-import React from 'react';
+import {React, useState} from 'react';
 import './App.css';
 import MainPage from './Components/MainPage';
 import Flower from './Components/Flower';
@@ -13,32 +12,49 @@ import bee2 from './img/bee2.png';
 import bee3 from './img/bee3.png';
 
 function App() {
+
+  const [showGuessingGame, setShowGuessingGame] = useState(false);
+
+  const handleGamblingButtonClick = () => {
+    setShowGuessingGame(true);
+  };
+
   return (
     <div className="App">
-      <header className="header">
-        <MainPage />
-      </header>
+      <div className='left'>
+        <MainPage></MainPage>
+        <div className="flower-grid">
+          <Flower imagePath={flower1} points={100}/>
+          <BeeWorker imagePath={bee1} points={5000}/>
+          <Flower imagePath={flower2} points={500}/>
+          <BeeWorker imagePath={bee2} points={10000}/>
+          <Flower imagePath={flower3} points={1000}/>
+          <BeeWorker imagePath={bee3} points={300000}/>
 
-      <div className="content">
-        <div className="left">
-          <div className="flower-grid">
-            <Flower imagePath={flower1} points={5} />
-            <Flower imagePath={flower2} points={20} />
-            <Flower imagePath={flower3} points={100} />
-          </div>
-        </div>
 
-        <div className="right">
-          <div className="beehive">
-            <h2>Beehive</h2>
-            <BeeWorker imagePath={bee1} points={100}/>
-            <BeeWorker imagePath={bee2} points={1000}/>
-            <BeeWorker imagePath={bee3} points={10000}/>
-          </div>
+
+
+          <div className='test'>
+              {showGuessingGame ? (
+                <h1 />
+              ) : (
+                <button onClick={handleGamblingButtonClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-8 px-16 rounded">GAMBLING</button>
+              )}
+            </div>
+
+
+
+
+          {/* <Flower imagePath={flower2} /> */}
+          {/* <Flower imagePath={flower1} /> */}
+          {/* <Flower imagePath={flower3} /> */}
         </div>
       </div>
+      
+
     </div>
   );
 }
 
 export default App;
+
