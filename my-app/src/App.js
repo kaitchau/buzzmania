@@ -1,3 +1,4 @@
+// App.js
 import React from 'react';
 import './App.css';
 import MainPage from './Components/MainPage';
@@ -14,30 +15,28 @@ import bee3 from './img/bee3.png';
 function App() {
   return (
     <div className="App">
-      <div className='left'>
-        <MainPage></MainPage>
-        <div className="flower-grid">
-          <Flower imagePath={flower1} points={5}/>
-          <BeeWorker imagePath={bee1} />
-          <Flower imagePath={flower2} points={20}/>
-          <BeeWorker imagePath={bee2} />
-          <Flower imagePath={flower3} points={100}/>
-          <BeeWorker imagePath={bee3} />
+      <header className="header">
+        <MainPage />
+      </header>
 
-          <div className='test'>
-            {/* <button type='submit'>test</button> */}
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-8 px-16 rounded">GAMBLING</button>
-            
+      <div className="content">
+        <div className="left">
+          <div className="flower-grid">
+            <Flower imagePath={flower1} points={5} />
+            <Flower imagePath={flower2} points={20} />
+            <Flower imagePath={flower3} points={100} />
           </div>
+        </div>
 
-
-          {/* <Flower imagePath={flower2} /> */}
-          {/* <Flower imagePath={flower1} /> */}
-          {/* <Flower imagePath={flower3} /> */}
+        <div className="right">
+          <div className="beehive">
+            <h2>Beehive</h2>
+            <BeeWorker imagePath={bee1} points={100}/>
+            <BeeWorker imagePath={bee2} points={1000}/>
+            <BeeWorker imagePath={bee3} points={10000}/>
+          </div>
         </div>
       </div>
-      
-
     </div>
   );
 }
