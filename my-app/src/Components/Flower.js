@@ -28,5 +28,3 @@ function Flower(props) {
   const element = <Flower image="../img/flower1.png"/>;
 
 export default Flower;
-
-

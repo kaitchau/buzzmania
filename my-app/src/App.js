@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState} from 'react';
 import './App.css';
 import MainPage from './Components/MainPage';
 import Flower from './Components/Flower';
@@ -12,23 +12,37 @@ import bee2 from './img/bee2.png';
 import bee3 from './img/bee3.png';
 
 function App() {
+
+  const [showGuessingGame, setShowGuessingGame] = useState(false);
+
+  const handleGamblingButtonClick = () => {
+    setShowGuessingGame(true);
+  };
+
   return (
     <div className="App">
       <div className='left'>
         <MainPage></MainPage>
         <div className="flower-grid">
           <Flower imagePath={flower1} points={5}/>
-          <BeeWorker imagePath={bee1} />
+          <BeeWorker imagePath={bee1} points={100}/>
           <Flower imagePath={flower2} points={20}/>
-          <BeeWorker imagePath={bee2} />
+          <BeeWorker imagePath={bee2} points={1000}/>
           <Flower imagePath={flower3} points={100}/>
-          <BeeWorker imagePath={bee3} />
+          <BeeWorker imagePath={bee3} points={10000}/>
+
+
+
 
           <div className='test'>
-            {/* <button type='submit'>test</button> */}
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-8 px-16 rounded">GAMBLING</button>
-            
-          </div>
+              {showGuessingGame ? (
+                <h1 />
+              ) : (
+                <button onClick={handleGamblingButtonClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-8 px-16 rounded">GAMBLING</button>
+              )}
+            </div>
+
+
 
 
           {/* <Flower imagePath={flower2} /> */}
