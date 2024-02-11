@@ -2,20 +2,19 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* body {
-  background-image: url("http://bgfons.com/upload/flag_texture608.jpg");
-} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
+/* border for flower and bees */
 a {
   padding: 10px;
-  background-color: rgb(153, 211, 252) ;
+  background-color: rgb(103, 200, 242) ;
 }
 
+/* clicking animation for flower and bees */
 a:active {
   animation: bounceBack 0.3s;
 }
@@ -43,20 +42,13 @@ a:active {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
-  grid-gap: 10px;
+  grid-gap: 20px;
 }
 
 .item {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* ADD-ON FEATURE: GAMBLING */
-.test {
-  margin: auto;
-  grid-column: 3;
-  grid-row: 1 / 3;
 }
 
 .flower:nth-child(3),
@@ -111,11 +103,18 @@ img {
 .flower-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-rows: minmax(20px, auto);
   grid-gap: 10px;
 }
 
 .beehive {
   margin-top: 20px; /* Adjust margin as needed */
   text-align: center;
+}
+
+/* ADD-ON FEATURE: GAMBLING */
+.test {
+  margin: auto;
+  grid-column: 3;
+  grid-row: 1 / 3;
 }

@@ -32,7 +32,7 @@ function GambleGame(props) {
   };
 
   return (
-    <div className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded" style={{ maxWidth: "213px"}}>
+    <div className="bg-gray-800 hover:bg-gray-900 text-white font-bold rounded-lg shadow-lg" style={{ maxWidth: "213px"}}>
       <h2>Guessing Game</h2>
       <form onSubmit={handleGuessSubmit}>
         <input type="number" style={{ color: "black" }} value={guess} onChange={(e) => setGuess(e.target.value)} placeholder="Enter your guess (0-100)" required />
@@ -40,7 +40,7 @@ function GambleGame(props) {
         <button type="submit">Submit Guess</button>
       </form>
       <p>{resultMessage}</p>
-      <p>Score: {score}</p>
+      
     </div>
   );
 }

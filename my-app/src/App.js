@@ -36,7 +36,7 @@ function App() {
               {showGuessingGame ? (
                 <GambleGame />
               ) : (
-                <button onClick={handleGamblingButtonClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-8 px-16 rounded">MINI GAME</button>
+                <button onClick={handleGamblingButtonClick} className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-8 px-16 rounded">MINI GAME</button>
               )}
             </div>
 
