@@ -24,12 +24,12 @@ function App() {
       <div className='left'>
         <MainPage></MainPage>
         <div className="flower-grid">
-          <Flower imagePath={flower1} points={5}/>
-          <BeeWorker imagePath={bee1} points={100}/>
-          <Flower imagePath={flower2} points={20}/>
-          <BeeWorker imagePath={bee2} points={1000}/>
-          <Flower imagePath={flower3} points={100}/>
-          <BeeWorker imagePath={bee3} points={10000}/>
+          <Flower imagePath={flower1} points={100}/>
+          <BeeWorker imagePath={bee1} points={5000}/>
+          <Flower imagePath={flower2} points={500}/>
+          <BeeWorker imagePath={bee2} points={10000}/>
+          <Flower imagePath={flower3} points={1000}/>
+          <BeeWorker imagePath={bee3} points={300000}/>
 
 
 
