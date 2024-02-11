@@ -8,8 +8,8 @@ import flower1 from './img/flower1.png';
 import flower2 from './img/flower2.png';
 import flower3 from './img/flower3.png';
 import bee1 from './img/bee1.png';
-import bee2 from './img/bee2.png';
-import bee3 from './img/bee3.png';
+import bee6 from './img/bee6.png';
+import queenbee from './img/queenbee.png';
 
 function App() {
 
@@ -25,18 +25,18 @@ function App() {
         <MainPage></MainPage>
         <div className="flower-grid">
           <Flower imagePath={flower1} points={100}/>
-          <BeeWorker imagePath={bee1} points={5000}/>
+          <BeeWorker imagePath={bee1} points={5000} name={"Billy"}/>
           <Flower imagePath={flower2} points={500}/>
-          <BeeWorker imagePath={bee2} points={10000}/>
+          <BeeWorker imagePath={bee6} points={10000} name={"Bob"}/>
           <Flower imagePath={flower3} points={1000}/>
-          <BeeWorker imagePath={bee3} points={300000}/>
+          <BeeWorker imagePath={queenbee} points={300000} name={"Queen Bee"}/>
 
 
           <div className='test'>
               {showGuessingGame ? (
                 <GambleGame />
               ) : (
-                <button onClick={handleGamblingButtonClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-8 px-16 rounded">GAMBLING</button>
+                <button onClick={handleGamblingButtonClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-8 px-16 rounded">MINI GAME</button>
               )}
             </div>
 

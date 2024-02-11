@@ -18,7 +18,7 @@ function Flower(props) {
           </div>
           <div className="text-center">
             <span className="block text-xl font-bold">{props.points} Points</span>
-            <span className="block text-sm">{props.timeout} Timeout</span>
+            
           </div>
         </a>
       );
